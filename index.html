@@ -34,23 +34,23 @@ None at the moment.
 
 
 <script> //start of functions and variables
-        var allergy_count = 0;  //allergy variable initialized at 0
-	var cold_count = 0;  //cold variable initialized at 0
+        var covid_count = 0;  //covid variable initialized at 0
+	var flu_count = 0;  //flu variable initialized at 0
 	
-        //the function for the choice of allergy
-        function allergyAdd() {  
-                allergy_count = allergy_count + 1;
+        //the function for the choice of covid 
+        function covidAdd() {  
+                covid_count = covid_count + 1;
 	}
-        //the function for the choice of cold
+        //the function for the choice of the flu
         function coldAdd() {
-		cold_count = cold_count + 1;
+		flu_count = flu_count + 1;
         }
         //the function for the results
 	function resultsFunction() {
 		var resultText = document.getElementById("results");
-		var allergyPercent = (allergy_count/(allergy_count + cold_count))*100;  //percent probability it is allergies
-	        var coldPercent = (cold_count/(allergy_count + cold_count))*100; //perent probability it is a cold
-		resultText.innerHTML = "Percent probability it is allergies =" + allergyPercent + "<br> Percent probability it is a cold =" + coldPercent; //inner HTML
+		var covidPercent = (covid_count/(covid_count + flu_count))*100;  //percent probability it is COVID-19
+	        var fluPercent = (flu_count/(covid_count + flu_count))*100; //perent probability it is the flu
+		resultText.innerHTML = "Percent probability it is COVID-19 =" + covidPercent + "<br> Percent probability it is the flu =" + fluPercent; //inner HTML
 	}
 		
 		
@@ -87,7 +87,7 @@ None at the moment.
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot"> <!--start of front page-->
-	<h1>Cold or Allergies?</h1> <!--header for front page-->
+	<h1>COVID-19 or the flu?</h1> <!--header for front page-->
 </div> <!--start of content for front page-->
 	
 <div id="content" class="w3-container"> <!--below is content of front page-->
@@ -111,9 +111,9 @@ None at the moment.
 </div> <!--start of content for page one-->
 	
 <div id="content" class="w3-container"> <!--below is content for page one-->
-        <p>Are your eyes itchy or watery?</p> <!--paragraph for page one-->   
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--button for yes-->
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--button for no-->
+        <p>Do you have a cough?</p> <!--paragraph for page one-->   
+	<a href="#two"  onclick="covidAdd();" class="w3-btn w3-black"> Yes</a> <!--button for yes-->
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black"> No</a> <!--button for no-->
 		
 	<footer class="w3-bottom w3-container w3-flat-carrot"> <!--footer-->
 	        <p>Maker Space!</p> <!--paragraph for footer-->
